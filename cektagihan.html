@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Cek Tagihan</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+  </head>
+    <style>
+      @media (max-width: 767px) {
+  .img-fluid {
+    width: 400px;
+    height: auto;
+  }
+}
+
+      @media (max-width: 768px) {
+  h1 {
+    font-size: 24px;
+  }
+  label {
+    font-size: 16px;
+  }
+  p {
+    font-size: 14px;
+  }
+
+      hr {
+        border-color: #fff;
+      }
+    }
+      .card {
+        background-color: #00BFFF ; /* ganti dengan kode warna biru yang Anda inginkan */
+      }
+       hr {
+      border-top: 2px solid #fff;
+    }
+    </style>
+  <body>
+    <div class="container mt-4">
+      <div class="card">
+        <div class="card-body">
+          <div class="row">
+            <div class="col-12 text-center">
+              <img src="aaaa.png" alt="Logo Perusahaan" class="img-fluid mb-4" style="max-width: 50%; height: auto;"> 
+               <h1 class="h4 text-center" style="text-align:center; color:white;">Cek Tagihan Air</h1>
+              <p style="color: #fff;">(Require Whatsapp)</p>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-6 mx-auto">
+              <form>
+                <div class="form-group">
+                  <label for="nama_pelanggan" class="text-left" style="text-align:center; color:white;">Nama:</label>
+                  <input type="text" id="nama_pelanggan" name="nama_pelanggan" class="form-control" required>
+                  <hr>
+                </div>
+                <div class="form-group">
+                  <label for="nomor_sambungan" class="text-left" style="text-align:center; color:white;">Nomor Sambungan:</label>
+                  <input type="text" id="nomor_sambungan" name="nomor_sambungan" class="form-control" required>
+                </div>
+                <hr>
+              </form>
+              <button type="button" id="kirim_button" class="btn btn-primary btn-lg btn-block">Kirim</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+    <script>
+      document.getElementById("kirim_button").addEventListener("click", function() {
+        sendWhatsAppMessage();
+      });
+
+      function sendWhatsAppMessage() {
+        var namaPelanggan = document.getElementById("nama_pelanggan").value;
+        var nomorSambungan = document.getElementById("nomor_sambungan").value;
+        var message = "Cek Tagihan Air\n\-----------------\n\Nama Pelanggan:"+ namaPelanggan +" \n\No. Sambungan:"+ nomorSambungan;
+        var url = "https://api.whatsapp.com/send?phone=+628114209111&text=" + encodeURI(message);
+        window.location.href = url;
+      }
+    </script>
+  </body>
+</html>
