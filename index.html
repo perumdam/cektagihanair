@@ -85,7 +85,7 @@
       function sendWhatsAppMessage() {
         var namaPelanggan = document.getElementById("nama_pelanggan").value;
         var nomorSambungan = document.getElementById("nomor_sambungan").value;
-        var message = "Cek Tagihan Air\n\-----------------\n\Nama Pelanggan:"+ namaPelanggan +" \n\No. Sambungan:"+ nomorSambungan;
+        var message = "Cek Tagihan Air\n\------------------------\n\Nama Pelanggan:"+ namaPelanggan +" \n\No. Sambungan:"+ nomorSambungan;
         var url = "https://api.whatsapp.com/send?phone=+628114209111&text=" + encodeURI(message);
         window.location.href = url;
       }
