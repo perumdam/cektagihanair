@@ -5,37 +5,42 @@
     <title>Cek Tagihan</title>
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
-  </head>
     <style>
-      @media (max-width: 767px) {
-  .img-fluid {
-    width: 400px;
-    height: auto;
-  }
-}
+      .card {
+        background-color: #00BFFF; /* ganti dengan kode warna biru yang Anda inginkan */
+        margin: 0 auto; /* membuat card berada di tengah-tengah halaman */
+        float: none; /* menghapus float card */
+      }
 
-      @media (max-width: 768px) {
-  h1 {
-    font-size: 24px;
-  }
-  label {
-    font-size: 16px;
-  }
-  p {
-    font-size: 14px;
-  }
+      .card-body {
+        padding: 2rem; /* menambah padding pada card-body agar lebih simetris */
+      }
 
       hr {
-        border-color: #fff;
+        border-top: 2px solid #fff;
+        margin-top: 1.5rem;
+        margin-bottom: 1.5rem; /* menambah margin pada hr agar lebih simetris */
       }
-    }
-      .card {
-        background-color: #00BFFF ; /* ganti dengan kode warna biru yang Anda inginkan */
+
+      @media (max-width: 768px) {
+        h1 {
+          font-size: 24px;
+        }
+
+        label {
+          font-size: 16px;
+        }
+
+        p {
+          font-size: 14px;
+        }
+
+        .card {
+          margin-top: 2rem; /* menambah margin-top pada card agar tidak terlalu dekat dengan header */
+        }
       }
-       hr {
-      border-top: 2px solid #fff;
-    }
     </style>
+  </head>
   <body>
     <div class="container mt-4">
       <div class="card">
@@ -43,7 +48,7 @@
           <div class="row">
             <div class="col-12 text-center">
               <img src="aaaa.png" alt="Logo Perusahaan" class="img-fluid mb-4" style="max-width: 50%; height: auto;"> 
-               <h1 class="h4 text-center" style="text-align:center; color:white;">Cek Tagihan Air</h1>
+              <h1 class="h4 text-center" style="text-align:center; color:white;">Cek Tagihan Air</h1>
               <p style="color: #fff;">(Require Whatsapp)</p>
             </div>
           </div>
